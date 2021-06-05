@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package voting;
+
+option go_package = "github.com/egsam98/voting/proto/votingpb";
+
+message Vote {
+  Voter voter = 1;
+  int64 candidate_id = 2;
+}
+
+message Voter {
+  int64 ID = 1 [json_name="id"];
+}
