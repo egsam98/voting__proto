@@ -4,6 +4,10 @@ package voting;
 
 option go_package = "github.com/egsam98/voting/proto/votingpb";
 
+message Votes {
+  repeated Vote votes = 1;
+}
+
 message Vote {
   Voter voter = 1;
   int64 candidate_id = 2;
