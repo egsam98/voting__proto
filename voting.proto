@@ -11,6 +11,12 @@ message Votes {
 message Vote {
   Voter voter = 1;
   int64 candidate_id = 2;
+  enum Status {
+    OK = 0;
+    FAIL = 1;
+  };
+  Status status = 3;
+  optional string fail_reason = 4;
 }
 
 message Voter {
