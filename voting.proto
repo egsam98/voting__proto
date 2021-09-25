@@ -10,19 +10,21 @@ message Votes {
 
 message Vote {
   Voter voter = 1;
-  int64 candidate_id = 2;
+  int64 campaign_id = 2;
+  int64 candidate_id = 3;
   enum Status {
     OK = 0;
     FAIL = 1;
   };
-  Status status = 3;
-  optional string fail_reason = 4;
+  Status status = 4;
+  optional string fail_reason = 5;
 }
 
 message Voter {
-  int64 id = 1;
-  string passport = 2;
-  string fullname = 3;
-  int64 birth_date = 4;
-  optional int64 death_date = 5;
+  bytes public_key = 1;
+  int64 id = 2;
+  string passport = 3;
+  string fullname = 4;
+  int64 birth_date = 5;
+  optional int64 death_date = 6;
 }
