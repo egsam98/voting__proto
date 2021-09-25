@@ -39,6 +39,6 @@ message VotePersisted {
 }
 
 message VoterPersisted {
-  bytes public_key = 1;
-  bytes data_rsa = 2;
+  bytes public_key_rsa = 1;
+  bytes passport_rsa = 2;
 }
